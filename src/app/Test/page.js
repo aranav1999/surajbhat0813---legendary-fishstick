@@ -27,19 +27,23 @@ const Quiz = () => {
 
   return (
     <>
-    <h1>City Quiz</h1>
-    <p>In which city is there a billboard that turns air into drinkable water?</p>
+    
+<div className='w-1/3 border rounded-xl mx-auto p-6 bg-sky-100'>
+
+    <h1 className='font-bold text-cyan-700 italic text-xl'> City Quiz</h1>
+    <p className='italic'>  In which city is there a billboard that turns air into drinkable water?</p>
     <form onSubmit={handleSubmit}>
         <br/>
         <textarea className="border border-grey-900 rounded-xl" onChange={(e) => {setAnswer(e.target.value)}}/>
         <br/>
-        <button className='border border-black-900 hover:bg-slate-200' disabled={answer.length===0 || status === "Submitting"}>Submit</button>
+        <button className='transition ease-in-out delay-100 bg-blue-500 text-white font-bold hover:scale-110 hover:bg-indigo-500 duration-100 border rounded-xl px-3 py-1 active:border-green-900 ' disabled={answer.length===0 || status === "Submitting"}>Submit</button>
         {error !== null &&
           <p className="Error">
             {error.message}
           </p>
         }
     </form>
+</div>
     </>
   )
 }
