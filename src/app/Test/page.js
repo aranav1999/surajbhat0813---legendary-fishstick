@@ -4,15 +4,11 @@ import React from 'react'
 import { useState } from 'react'
 
 const Quiz = () => {
-<<<<<<< HEAD
+
   const [answer, setAnswer] = useState('');
   const [status, setStatus] = useState('Typing...');
   const [error, setError] = useState(null);
-=======
-    const [answer, setAnswer] = useState('');  //to store answers
-    const [status, setStatus] = useState('Typing...'); //to check status
-    const [error, setError] = useState(null); //to store error
->>>>>>> d2edce69cc7ecdb969b071049201aa7a6ee6e957
+
 
   if (status === 'Success') {
     return <h1>That's right!</h1>
@@ -67,11 +63,6 @@ function CheckAnswer(answer) {
         resolve();
       }
     });
-<<<<<<< HEAD
   });
 }
 export default Quiz
-=======
-  }
-export default Quiz
->>>>>>> d2edce69cc7ecdb969b071049201aa7a6ee6e957
