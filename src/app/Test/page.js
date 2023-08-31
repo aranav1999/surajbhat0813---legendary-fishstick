@@ -4,9 +4,9 @@ import React from 'react'
 import { useState } from 'react'
 
 const Quiz = () => {
-    const [answer, setAnswer] = useState('');
-    const [status, setStatus] = useState('Typing...');
-    const [error, setError] = useState(null);
+    const [answer, setAnswer] = useState('');  //to store answers
+    const [status, setStatus] = useState('Typing...'); //to check status
+    const [error, setError] = useState(null); //to store error
 
     if (status === 'Success') {
         return <h1>That's right!</h1>
